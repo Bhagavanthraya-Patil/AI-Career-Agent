@@ -55,6 +55,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **`.env.example`:** Comprehensive template documenting every configuration option with defaults and comments.
 - **Settings Archive:** Old flat `backend/app/core/config.py` deleted; `backend/main.py` updated to import from `app.core.settings`.
 
+## [0.6.0-alpha] - 2026-07-07
+
+### Added
+- **Greenhouse Collector Plugin:** First concrete collector implementation extending the universal framework.
+- **GreenhouseCollector class:** Full BaseCollector lifecycle (initialize, collect, normalize, validate, deduplicate, save, cleanup) with `@CollectorRegistry.register` decorator.
+- **Greenhouse JSON API integration:** Consumes `GET https://api.greenhouse.io/v1/boards/{board_token}/jobs?content=true&page=N` with pagination, content extraction, and metadata parsing.
+- **HTTP client:** `httpx.AsyncClient` with User-Agent, timeouts, and `RetryStrategy` for exponential backoff on `NetworkError` and `RateLimitError`.
+- **Response parsing:** Location parsing (city/state/country/remote detection), salary extraction from metadata, employment type and experience level mapping, HTML-to-text description conversion.
+- **Error handling:** 404 boards, rate limits, timeouts, invalid JSON — all captured as structured `ErrorReport` entries.
+- **Edge case coverage:** Empty responses, pagination boundary conditions, `max_results` trimming, validation rejection of incomplete jobs, deduplication against `existing_source_ids`.
+- **21 unit tests:** Full mock-based test suite with `pytest-asyncio` covering collection, normalization, validation, deduplication, error recovery, location parsing, salary parsing, cleanup idempotency, and registry integration.
+
 ## [0.5.0-alpha] - 2026-07-07
 
 ### Added

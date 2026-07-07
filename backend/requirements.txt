@@ -9,6 +9,8 @@ pydantic-settings>=2.6.0,<3.0.0
 # Database
 sqlalchemy>=2.0.36,<3.0.0
 alembic>=1.14.0,<2.0.0
+aiosqlite>=0.20.0,<1.0.0
+asyncpg>=0.30.0,<1.0.0
 
 # HTTP & Async
 httpx>=0.28.0,<1.0.0

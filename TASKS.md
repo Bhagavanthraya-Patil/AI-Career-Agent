@@ -28,6 +28,7 @@
 - [x] Build Universal Job Collector Framework (BaseCollector, registry, models, exceptions, retry, logging, config hooks).
 - [x] Create plugin architecture with placeholder folders for 9 job sources.
 - [x] Create collector documentation explaining lifecycle, inputs, outputs, and extension patterns.
+- [x] Implement Greenhouse collector plugin (21 unit tests passing).
 - [ ] Implement Playwright job scraping engine.
 - [ ] Implement parsing rules for major job portals.
 - [ ] Implement job details extractor & model mapping.
