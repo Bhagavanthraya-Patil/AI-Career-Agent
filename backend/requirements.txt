@@ -1,0 +1,41 @@
+# Core Framework
+fastapi>=0.115.0,<1.0.0
+uvicorn[standard]>=0.32.0,<1.0.0
+
+# Data Validation & Settings
+pydantic>=2.10.0,<3.0.0
+pydantic-settings>=2.6.0,<3.0.0
+
+# Database
+sqlalchemy>=2.0.36,<3.0.0
+alembic>=1.14.0,<2.0.0
+
+# HTTP & Async
+httpx>=0.28.0,<1.0.0
+aiofiles>=24.1.0,<25.0.0
+
+# Browser Automation
+playwright>=1.49.0,<2.0.0
+
+# AI / LLM
+google-genai>=1.0.0,<2.0.0
+
+# PDF Generation
+reportlab>=4.2.0,<5.0.0
+python-docx>=1.1.2,<2.0.0
+
+# Utilities
+python-multipart>=0.0.19,<1.0.0
+email-validator>=2.2.0,<3.0.0
+jinja2>=3.1.4,<4.0.0
+
+# Development & Linting
+ruff>=0.8.0,<1.0.0
+black>=24.10.0,<25.0.0
+pre-commit>=4.0.0,<5.0.0
+
+# Testing
+pytest>=8.3.0,<9.0.0
+pytest-asyncio>=0.24.0,<1.0.0
+pytest-cov>=6.0.0,<7.0.0
+httpx>=0.28.0,<1.0.0
