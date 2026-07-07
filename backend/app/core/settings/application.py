@@ -56,3 +56,25 @@ class ApplicationSettings(BaseConfig):
         default=3,
         description="Maximum attempts to fill a single form field",
     )
+
+    # Tracker settings
+    track_applications: bool = Field(
+        default=True,
+        description="Enable application tracking",
+    )
+    record_status_history: bool = Field(
+        default=True,
+        description="Record immutable status change history",
+    )
+    deduplicate_tracking: bool = Field(
+        default=True,
+        description="Prevent tracking the same job twice",
+    )
+    max_history_per_application: int = Field(
+        default=1000,
+        description="Maximum history entries per application",
+    )
+    auto_cleanup_inactive: bool = Field(
+        default=True,
+        description="Automatically deactivate terminal-status applications",
+    )

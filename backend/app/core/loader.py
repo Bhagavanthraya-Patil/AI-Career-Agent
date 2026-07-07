@@ -10,6 +10,7 @@ from .settings.email import EmailSettings
 from .settings.gemini import GeminiSettings
 from .settings.job_collection import JobCollectionSettings
 from .settings.logging_settings import LoggingSettings
+from .settings.parsing import ParsingSettings
 from .settings.playwright import PlaywrightSettings
 from .settings.storage import StorageSettings
 
@@ -26,6 +27,7 @@ class Settings(BaseSettings):
     app: AppSettings = Field(default_factory=AppSettings)
     database: DatabaseSettings = Field(default_factory=DatabaseSettings)
     gemini: GeminiSettings = Field(default_factory=GeminiSettings)
+    parsing: ParsingSettings = Field(default_factory=ParsingSettings)
     playwright: PlaywrightSettings = Field(default_factory=PlaywrightSettings)
     logging: LoggingSettings = Field(default_factory=LoggingSettings)
     email: EmailSettings = Field(default_factory=EmailSettings)

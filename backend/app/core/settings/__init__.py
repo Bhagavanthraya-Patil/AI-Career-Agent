@@ -2,8 +2,7 @@ from pydantic import BaseModel
 
 
 class BaseConfig(BaseModel):
-    class Config:
-        extra = "forbid"
+    model_config = {"extra": "ignore"}
 
 
 def __getattr__(name):

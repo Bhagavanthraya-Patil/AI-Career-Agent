@@ -1,3 +1,4 @@
+from .job_query_repository import JobQueryRepository
 from .job_repository import (
     JobRepository,
     CompanyNotFoundError,
@@ -5,7 +6,11 @@ from .job_repository import (
     JobNotFoundError,
 )
 
+# ApplicationRepository lives in app/agents/tracker/tracker_repository.py
+# to keep the tracker self-contained within the agents subsystem.
+
 __all__ = [
+    "JobQueryRepository",
     "JobRepository",
     "CompanyNotFoundError",
     "JobSourceNotFoundError",

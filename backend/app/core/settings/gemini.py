@@ -9,8 +9,8 @@ from . import BaseConfig
 
 class GeminiSettings(BaseConfig):
     provider: Literal["gemini", "groq", "ollama"] = Field(
-        default="gemini",
-        description="Default LLM provider to use",
+        default="ollama",
+        description="Default LLM provider to use (ollama for local dev, no API key needed)",
     )
 
     gemini_api_key: str = Field(
